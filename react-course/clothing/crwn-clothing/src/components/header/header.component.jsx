@@ -1,11 +1,15 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import {Link} from 'react-router-dom';
+import CartIcon from '../cart-icon/cart-icon.component';
 import './header.styles.scss';
+import { connect } from 'react-redux';
 import {ReactComponent as Logo} from '../../assets/logo.svg';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { auth } from '../../firebase/firebase.utils';
 
-const Header=({currentUser})=>(
+
+const Header=({currentUser,hidden})=>(
     <div className="header">
         <Link className="logo-container" to="/">
         <Logo className="logo"/>
@@ -26,8 +30,15 @@ const Header=({currentUser})=>(
           SIGN IN
         </Link>
       )}
+      <CartIcon />
         </div>
+        {hidden ? null : <CartDropdown />}
     </div>
 
 )
-export default Header;
+const mapStateToProps = ({user:{currentUser},cart:{hidden}})=>({
+  currentUser,
+  hidden
+
+})
+export default connect(mapStateToProps)(Header);
