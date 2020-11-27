@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Kakamega Rainforest</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Kforest</a>
+            <div class="toggle"></div>
+        </header>
+        <img src="bg.jpg" class="bg">
+        <img src="bird.png" class="bird">
+        <div class="content">
+            <h2>The Rainforest of<br><span>Kakamega</span></h2>
+            <p>Hearing the wonderful bird song from the variety of birdlife,
+                seeing the colourful butterflies and the different types of monkeys was the highlight for us.
+                Also being able to walk freely without a guide welcome to kakamega
+            </p>
+            <a href="#">Explore</a>
+        </div>
+        <ul class="sci">
+            <li> <a href="#"> <img src="facebook.png"></a></li>
+            <li> <a href="#"> <img src="twitter.png"></a></li>
+            <li> <a href="#"> <img src="instagram.png"></a></li>
+
+        </ul>
+
+        <div class="textBlocks">
+            <div class="blocks">
+                <h3>Nature Walks</h3>
+                <p>Nature walks in Kakamega forest is lifetime experiense watching wildlife in their habitat including
+                    pimates, birds, butterflies old massive trees, flying squirrels tree pangolines and many other
+                    animals. Also colourfull mashroom are attractive.
+                    Walks through the forest watching defferent species of monkeys, massive native trees marked as the
+                    "Big five" and their medicinal values, butterflies, birds, Visit canopy watch tower and tour the
+                    natural grassland.</p>
+            </div>
+
+            <div class="blocks">
+                <h3>Kisumu day trip</h3>
+                <p>
+                    In Kisumu we will Visit National museums for two hours, proceed to KWS Imapla Park and have board
+                    ride on the Lake for two and half hours, then have lunch during our board ride excursion on the
+                    Lake.
+                    From here we will visit the Equator line then back to Nyandela market for those visitors need to buy
+                    some presents for their family from community of Nyandela in Kisumu.
+
+
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            const bg = document.querySelector('.bg');
+
+            const content = document.querySelector('.content');
+
+            const bird = document.querySelector('.bird');
+
+            bg.style.width=100 + e.pageX +'%';
+            bird.style.right=100 +e.pageX/2 + 'px';
+            content.style.left=100 + e.pageX/2.5 + 'px';
+        });
+    </script>
+</body>
+
+</html>
